@@ -48,4 +48,14 @@ def lesson_03():
     ui.run()
 
 def lesson_04():
-    pass
+    label = ui.label('Crotetas')
+
+    toggle_text = ui.toggle(['text-1', 'text-2'], value='text-1',
+                            on_change=lambda : label.set_text(f'You clicked {toggle_text.value}'))
+
+    image = ui.image('JavaScript.png').classes('w-64')
+
+    toggle_image = ui.toggle(['JavaScript', 'Python'],
+                             on_change=lambda : image.set_source(f'{toggle_image.value}.png'))
+
+    ui.run()
