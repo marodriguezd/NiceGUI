@@ -41,4 +41,11 @@ def lesson_03():
     ui.button('Click me!', color='green',
               on_click=lambda : ui.notify('You clicked me!'))
 
+    with ui.button('Click me!', color='pink',
+                   on_click=lambda : badge.set_text(int(badge.text)+1)):
+        badge = ui.badge('0', color='red').props('floating')
+
     ui.run()
+
+def lesson_04():
+    pass
