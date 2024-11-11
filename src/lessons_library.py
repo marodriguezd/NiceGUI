@@ -59,3 +59,15 @@ def lesson_04():
                              on_change=lambda : image.set_source(f'{toggle_image.value}.png'))
 
     ui.run()
+
+def lesson_05():
+    gender_image = ui.image('').classes('w-48')
+    radio_image = ui.image('').classes('w-48')
+
+    toggle_gender = ui.toggle(['WOMAN', 'MAN'],
+                              on_change=lambda : gender_image.set_source(f'{toggle_gender.value}.png'))
+
+    radio_country = ui.radio(['England', 'USA'],
+                             on_change=lambda : radio_image.set_source((f'{radio_country.value}.png')))
+
+    ui.run()
